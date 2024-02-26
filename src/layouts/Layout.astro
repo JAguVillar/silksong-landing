@@ -1,6 +1,9 @@
 ---
+import "@fontsource-variable/montserrat";
+import "@fontsource/poppins";
+
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,44 +11,49 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  :root {
+    --heading-1-size: 4rem;
+    --heading-1-size-value: 4;
+    --heading-2-size: 2.8rem;
+    --heading-2-size-value: 2.8;
+    --heading-3-size: 2.2rem;
+    --heading-3-size-value: 2.2;
+    --heading-4-size: 1.2rem;
+    --heading-4-size-value: 1.2;
+  }
+  html {
+    font-family: "poppins", system-ui, sans-serif;
+    /* background: #13151a; */
+    background: #000;
+    color: #fff;
+  }
+  .limit {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: calc(var(--heading-2-size-value) * 1rem);
+    font-weight: 500;
+  }
+  h3 {
+    font-size: calc(var(--heading-3-size-value) * 1rem);
+    font-weight: 500;
+  }
+  h4 {
+    font-size: calc(var(--heading-4-size-value) * 1rem);
+    font-weight: 500;
+  }
 </style>
