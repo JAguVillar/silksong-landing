@@ -2,12 +2,10 @@
 
 ---
 
-<section class="limit flex py-4 m-auto">
-  <div
-    class="preview-right text-left flex flex-col justify-evenly items-center"
-  >
+<section class="limit flex py-4 m-auto justify-center">
+  <div class="preview-left text-left flex flex-col justify-evenly items-center">
     <h3>A Soulful, Orchestral Score</h3>
-    <div>
+    <div class="flex text-left flex-col justify-evenly items-start">
       <p class="mb-4">
         Hollow Knight's award-winning composer, Christopher Larkin, brings
         melancholy melodies, symphonic strings and heart-thumping, soul
@@ -20,10 +18,24 @@
     </div>
   </div>
   <img
+    width="301"
+    height="292"
+    sizes="(max-width: 640px) 100vw, (max-width: 767px) 100vw, 100vw"
     src="soundtrack/album-art.jpg"
     alt="Captured and Taken to a Distant Land
 "
   />
 </section>
 
-<style></style>
+<style>
+  section {
+    padding: 3vw 4vw;
+  }
+
+  .preview-right {
+    margin-left: 10%;
+  }
+  .preview-left {
+    margin-right: 10%;
+  }
+</style>
