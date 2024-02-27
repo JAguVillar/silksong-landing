@@ -1,12 +1,7 @@
 ---
-// TODO: hacer componente vue o algo mas
+import VueCarousel from "@/components/Carousel.vue";
 ---
 
-<!-- <script is:inline>
-  const button = document.querySelector("button.alert");
-
-  button.addEventListener("click", () => {
-    alert("klko");
-  });
-</script> -->
-<section class="limit"></section>
+<section class="limit h-screen min-h-screen">
+  <VueCarousel client:load />
+</section>
